@@ -128,6 +128,8 @@ npmnpm input.csv react@18.0.1 --update
 https://user-images.githubusercontent.com/53977614/171876005-b9086a66-14f8-43ca-a8b5-c213787d96ad.mov
 
 
+(The created pull request can be seen [here](https://github.com/aryanshridhar/ReactNative-Weather-App/pull/28)!)
+
 #### register
 
 
