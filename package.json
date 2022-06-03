@@ -1,7 +1,7 @@
 {
   "name": "@aryanshridhar/npmnpm",
-  "version": "0.0.0-development",
-  "description": "A quick CLI tool to get outdated dependencies and update them if required",
+  "version": "0.0.1",
+  "description": "A quick CLI tool to get outdated dependencies and update them if required.",
   "files": [
     "!lib/**/*",
     "lib/**/*",
