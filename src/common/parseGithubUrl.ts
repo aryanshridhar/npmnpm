@@ -1,4 +1,4 @@
-import { Data } from '../../types/parseGithubUrl';
+import { ParsedData } from '../../types/parseGithubUrl';
 import axios from 'axios';
 import defaultBranch from 'default-branch';
 
@@ -6,20 +6,18 @@ const FETCH_URL = (repoLink: string, branch: string) => {
   return `https://raw.githubusercontent.com/${repoLink}/${branch}/package.json`;
 };
 
-const getVersion = async (
+const getPackageJSON = async (
   repoLink: string,
-  branch: string,
-  dependency: string
+  branch: string
 ): Promise<string> => {
   try {
-    const { data } = await axios.get<Data>(FETCH_URL(repoLink, branch));
-    const version = data.dependencies[dependency];
-    return version.substring(1);
+    const { data } = await axios.get<string>(FETCH_URL(repoLink, branch));
+    return data;
   } catch (error) {
     if (axios.isAxiosError(error)) {
-      return '-1.-1.-1';
+      return '';
     } else {
-      return '-1.-1.-1';
+      return '';
     }
   }
 };
@@ -27,15 +25,18 @@ const getVersion = async (
 async function parseGithubUrl(
   url: string,
   dependency: string
-): Promise<string> {
+): Promise<ParsedData> {
   const splittedURL = url.split('/');
   splittedURL.splice(0, 3);
   const repoLink = splittedURL.join('/');
 
   const branch = await defaultBranch(url);
-  const version = await getVersion(repoLink, branch, dependency);
+  const packageJson = await getPackageJSON(repoLink, branch);
+  const repoVersion = JSON.parse(JSON.stringify(packageJson)).dependencies[
+    dependency
+  ];
 
-  return version;
+  return { packageJson, repoVersion, branch };
 }
 
 export default parseGithubUrl;

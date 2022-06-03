@@ -1,5 +1,5 @@
-export interface Data {
-  dependencies: {
-    [key: string]: string;
-  };
+export interface ParsedData {
+  packageJson: string;
+  repoVersion: string;
+  branch: string;
 }

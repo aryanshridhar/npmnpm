@@ -1,4 +1,4 @@
-import { CSVData } from '../../types/read';
+import { CSVData } from '../../types/readCSV';
 /* eslint-disable @typescript-eslint/no-unsafe-return */
 import csv from 'csvtojson';
 

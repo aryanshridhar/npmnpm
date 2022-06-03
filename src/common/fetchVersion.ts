@@ -1,4 +1,4 @@
-import { Data } from '../../types/fetch';
+import { Data } from '../../types/fetchVersion';
 import axios from 'axios';
 
 const FETCH_URL = (name: string) =>
