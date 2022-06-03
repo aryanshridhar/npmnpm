@@ -3,7 +3,7 @@ import {
   DefaultTabledata,
   UpdateParamTableConfigData,
   UpdateParamTabledata,
-} from '../../types/display';
+} from '../../types/tableConfig';
 
 import { TableUserConfig } from 'table';
 

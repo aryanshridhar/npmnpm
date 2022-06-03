@@ -1,4 +1,4 @@
-import { CSVData } from './read';
+import { CSVData } from './readCSV';
 import ora from 'ora';
 
 export interface updateConfigParam {
