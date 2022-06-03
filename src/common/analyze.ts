@@ -28,13 +28,15 @@ const handleAnalyze = async (
   );
   spinner.start();
 
-  if (
-    checkForValidVersion(version, () => {
-      console.log(red('\nSpecified version is invalid!'));
-      spinner.stop();
-    }) === false
-  ) {
-    return;
+  if (!isLatestParam) {
+    if (
+      checkForValidVersion(version, () => {
+        console.log(red('\nSpecified version is invalid!'));
+        spinner.stop();
+      }) === false
+    ) {
+      return;
+    }
   }
 
   const userVersion = await getUserVersion(

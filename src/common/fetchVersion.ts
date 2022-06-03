@@ -6,7 +6,6 @@ const FETCH_URL = (name: string) =>
 
 const getQueryURL = (dependency: string): string => {
   const parsedName = dependency.split(' ').join('+');
-  console.log(FETCH_URL(parsedName));
   return FETCH_URL(parsedName);
 };
 
