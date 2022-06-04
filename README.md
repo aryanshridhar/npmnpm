@@ -115,26 +115,55 @@ dyte-sample-app-backend,https://github.com/dyte-in/backend-sample-app/
 
 npmnpm input.csv axios@0.23.0
 
-https://user-images.githubusercontent.com/53977614/171873726-dfd42ce0-0861-45d2-b237-e5625efe62d0.mov
 
+<details>
+<summary>Example</summary>
+
+ https://user-images.githubusercontent.com/53977614/171873726-dfd42ce0-0861-45d2-b237-e5625efe62d0.mov
+
+  
+</details>
 
 npmnpm input.csv axios --latest
 
+
+
+
+<details>
+<summary>Example</summary>
+
 https://user-images.githubusercontent.com/53977614/171873730-3782161c-7e6a-4158-b509-4abd3d662469.mov
+  
+</details>
 
 
 npmnpm input.csv react@18.0.1 --update
 
-https://user-images.githubusercontent.com/53977614/171876005-b9086a66-14f8-43ca-a8b5-c213787d96ad.mov
 
 
+
+<details>
+<summary>Example</summary>
+
+https://user-images.githubusercontent.com/53977614/171873730-3782161c-7e6a-4158-b509-4abd3d662469.mov
+
+ 
 (The created pull request can be seen [here](https://github.com/aryanshridhar/ReactNative-Weather-App/pull/28)!)
+
+</details>
 
 #### register
 
 
 npmnpm register <your_access_token>
 
+
+<details open>
+<summary>Example</summary>
+
+
 https://user-images.githubusercontent.com/53977614/171874745-463fc4eb-c606-4c61-941b-abe2d494993b.mov
 
 (Don't worry! I have deleted that PAT now!)
+
+</details>
