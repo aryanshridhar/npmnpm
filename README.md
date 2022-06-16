@@ -2,6 +2,7 @@
 
 A quick CLI tool to look out for outdated packages within your Node project and update them if required!
 
+Developed in a <strong>single</strong> day!
 ## Installation
 
 The package is already pushed to npm registry (https://www.npmjs.com/package/@aryanshridhar/npmnpm), to use it one can simply install it globally by - 
